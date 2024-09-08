@@ -1,0 +1,39 @@
+.custom-indicators .carousel-indicators [data-bs-target] {
+  background-color: #a3a3a3;
+  /* Color de los puntos */
+}
+
+.custom-indicators .carousel-indicators .active {
+  background-color: black;
+  /* Color del punto activo */
+}
+
+
+
+body {
+  --sb-track-color: #ababab;
+  --sb-thumb-color: #5f5f5f;
+  --sb-size: 11px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 7px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
